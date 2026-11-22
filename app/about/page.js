@@ -1,0 +1,6 @@
+import {PageHero,Cta} from '@/components/ui';import {site} from '@/lib/data';
+export const metadata={title:'About us'};
+export default function A(){return(<><PageHero t="About Time Digital" x="A Noida agency that handles your whole digital presence, from first website to ongoing growth."/>
+<section className="sec"><div className="w g2"><div><h2>Who we are</h2><p style={{marginTop:16}}>{site.name} is a web development and 360° digital solutions company. We design and build websites and apps, run SEO and ad campaigns, create brand identities and produce video, so one team can look after your business online.</p><p style={{marginTop:14}}>Our promise is in our line: {site.tag}.</p></div>
+<div><h2>Our office</h2><p style={{marginTop:16}}>{site.addr}</p><p style={{marginTop:10}}>{site.hours}</p></div></div></section>
+<section className="sec dk"><div className="w"><div className="hd"><h2>What we stand for</h2></div><div className="g2">{[['Results first','We measure work by leads, sales and growth, not by hours spent.'],['Honest pricing','You get a clear quote and a clear scope before work begins.'],['Long-term partnership','We want to be the agency you stay with as you grow.']].map(([a,b])=>(<div className="pt" key={a}><h3>{a}</h3><p>{b}</p></div>))}</div></div></section><Cta/></>);}
